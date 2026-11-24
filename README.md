@@ -6,7 +6,7 @@ A collection of hands-on AWS, Cloud, and DevOps projects.
 
 | # | Project | Services & tools | Overview |
 |---|---|---|---|
-| 1 | [CodeBuild Python Demo](https://github.com/DHRUVRAJPUTTT/codebuild-python-demo) | AWS CodeBuild, GitHub, Python, Flask, pytest, Amazon S3, CloudWatch Logs, IAM | GitHub-triggered CI pipeline that installs dependencies, runs pytest, and uploads a ZIP artifact to S3 when tests pass. |
+| 1 | [CodeBuild Python CI Demo](01-codebuild-python-demo/) | AWS CodeBuild, GitHub, Python, Flask, pytest, Amazon S3, CloudWatch Logs, IAM | GitHub-triggered CI pipeline that installs dependencies, runs pytest, and publishes a ZIP artifact to S3 when tests pass. |
 | 2 | CodeDeploy EC2 Application Deployment | AWS CodePipeline, AWS CodeDeploy, Amazon EC2, IAM, Nginx | In-place deployment to EC2 using the CodeDeploy agent, an AppSpec file, and lifecycle hook scripts. Implementation pending. |
 
 ## Repository structure
@@ -15,16 +15,24 @@ A collection of hands-on AWS, Cloud, and DevOps projects.
 AWS-Projects/
 ├── README.md
 ├── 01-codebuild-python-demo/
-└── 02-codedeploy-ec2/
+│   ├── app.py
+│   ├── buildspec.yml
+│   ├── requirements.txt
+│   ├── test_app.py
+│   └── README.md
+└── 02-codedeploy-ec2/   (planned)
 ```
-
-Each project folder will contain its source code, configuration, scripts, and project-specific documentation. The CodeBuild project is currently maintained in its original repository; this index links to it until its files are added here.
 
 ## Planned projects
 
+- AWS CodeDeploy application deployment to EC2
 - Terraform-based AWS infrastructure
 - CloudWatch monitoring and alerting
 - S3 static website hosting
+
+## Notes
+
+The CodeBuild demo is included here as a portfolio copy. Its original repository remains available at [codebuild-python-demo](https://github.com/DHRUVRAJPUTTT/codebuild-python-demo). The original AWS CodeBuild project and webhook are not automatically redirected to this portfolio copy.
 
 ## Author
 
