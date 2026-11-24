@@ -3,21 +3,21 @@ version: 0.0
 os: linux
 
 files:
-  - source: index.html
+  - source: 02-codedeploy-ec2/index.html
     destination: /var/www/html/
 
 hooks:
   BeforeInstall:
-    - location: scripts/before_install.sh
+    - location: 02-codedeploy-ec2/scripts/before_install.sh
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: scripts/application_start.sh
+    - location: 02-codedeploy-ec2/scripts/application_start.sh
       timeout: 300
       runas: root
 
   ValidateService:
-    - location: scripts/validate_service.sh
+    - location: 02-codedeploy-ec2/scripts/validate_service.sh
       timeout: 300
       runas: root
