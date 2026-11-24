@@ -1,12 +1,32 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - echo "Starting Elastic Beanstalk build"
+      - python --version
+      - pip --version
+
+  pre_build:
+    commands:
+      - echo "Installing application dependencies"
+      - pip install -r 03-elastic-beanstalk/requirements.txt
+
   build:
     commands:
-      - echo "Preparing Elastic Beanstalk application bundle"
-      - ls -la 03-elastic-beanstalk
+      - echo "Validating Python application"
+      - python -m py_compile 03-elastic-beanstalk/application.py
+      - echo "Preparing deployment package"
+      - ls -la 03-elastic-beanstalk/
+
+  post_build:
+    commands:
+      - echo "Build completed successfully"
 
 artifacts:
   base-directory: 03-elastic-beanstalk
   files:
     - '**/*'
+  discard-paths: no
