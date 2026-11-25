@@ -4,7 +4,7 @@
 
 `AWS CI/CD` · `Docker` · `Amazon ECR` · `ECS Fargate` · `Python` · `Flask`
 
-[Projects](#projects) · [Pipelines](#how-each-pipeline-works) · [Structure](#repository-structure) · [Skills](#skills-demonstrated) · [Roadmap](#roadmap) · [Notes](#notes)
+[Projects](#projects) · [Pipelines](#how-each-pipeline-works) · [Structure](#repository-structure) · [Skills](#skills-demonstrated)
 
 ---
 
